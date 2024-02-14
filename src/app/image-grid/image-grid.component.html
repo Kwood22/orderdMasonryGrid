@@ -1,0 +1,12 @@
+<div
+  class="p-5 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+>
+  <div *ngFor="let column of columnizedImages" class="grid gap-4">
+    <div *ngFor="let imageInColumn of column">
+      <img
+        class="w-full h-full object-cover object-center"
+        [src]="imageInColumn"
+      />
+    </div>
+  </div>
+</div>
