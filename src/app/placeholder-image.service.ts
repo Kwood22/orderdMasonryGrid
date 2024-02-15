@@ -11,9 +11,10 @@ export class PlaceholderImageService {
     const imageUrls: string[] = [];
 
     for (let i = 1; i <= 10; i++) {
-      const width = 300 + i * 70;
+      const width = Math.floor(Math.random() * (500 - 300 + 1)) + 300;
+      const height = Math.floor(Math.random() * (650 - 240 + 1)) + 240;
       const text = i.toString(); 
-      const imageUrl = `https://place-hold.it/${width}/000/fff?text=${text}&fontsize=50`;
+      const imageUrl = `https://place-hold.it/${width}x${height}/000/fff?text=${text}&fontsize=50`;
       imageUrls.push(imageUrl);
     }
 
